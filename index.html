@@ -1,11 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
         <link rel="stylesheet" href="style.css" />
         <title>Notizblock</title>
     </head>
-    <body></body>
+    <body onload="init()">
+        <div id="notice">
+            <h1>Notizblock</h1>
+
+            <div class="input_look">
+                <input id="note_input" type="text" />
+                <button onclick="addNote()">Speichern</button>
+            </div>
+            <hr />
+            <h2>Gespeicherte Notizen:</h2>
+            <div id="content"></div>
+            <h2>Erledigte Notizen:</h2>
+            <div id="trash_content"></div>
+            <!-- <h3>gelöschte Notizen</h3> -->
+            <div id="deleted_content"></div>
+        </div>
+    </body>
     <script src="script.js"></script>
 </html>
